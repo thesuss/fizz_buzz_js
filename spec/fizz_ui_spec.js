@@ -2,21 +2,21 @@ describe('Fizz UI', function() {
   beforeEach(function() {
     // Or this:
     jasmine.getFixtures().fixturesPath = 'base/spec/fixtures';
-    loadFixtures('index.html');
+    loadFixtures('f_fixture.html');
     $.holdReady(false);
   });
 
   afterEach(function() {
     // If you need to reset some values after each testing
-    // you can do it here. 
+    // you can do it here.
   });
 
-  describe("displays text", function() {
+  describe("displays number/fizz", function() {
 
     it("when button is clicked", function() {
-      $('#text').val('Some random text...');
+      $('#number').val('77');
       $('#click_me').trigger('click');
-      expect($('#display_message').text()).toBe('Some random text...');
+      expect($('#display_message').text()).toBe('77');
     });
   });
 });
